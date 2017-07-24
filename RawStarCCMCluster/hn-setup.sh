@@ -28,7 +28,7 @@ ln -s /opt/intel/impi/${impi_version}/lib64/ /opt/intel/impi/${impi_version}/lib
 
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
 
-rpm -ivh epel-release-7-9.noarch.rpm
+rpm -ivh epel-release-7-10.noarch.rpm
 yum install -y -q nfs-utils sshpass nmap htop npm
 yum groupinstall -y "X Window System"
 npm install -g azure-cli
