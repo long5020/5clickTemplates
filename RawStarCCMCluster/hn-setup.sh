@@ -20,8 +20,11 @@ mkdir -p /home/$USER/bin
 mkdir -p /mnt/resource/scratch
 mkdir -p /mnt/nfsshare
 
-ln -s /opt/intel/impi/5.1.3.181/intel64/bin/ /opt/intel/impi/5.1.3.181/bin
-ln -s /opt/intel/impi/5.1.3.181/lib64/ /opt/intel/impi/5.1.3.181/lib
+impi_version=`ls /opt/intel/impi`
+source /opt/intel/impi/${impi_version}/bin64/mpivars.sh
+
+ln -s /opt/intel/impi/${impi_version}/intel64/bin/ /opt/intel/impi/${impi_version}/bin
+ln -s /opt/intel/impi/${impi_version}/lib64/ /opt/intel/impi/${impi_version}/lib
 
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
 
