@@ -29,9 +29,10 @@ ln -s /opt/intel/impi/${impi_version}/lib64/ /opt/intel/impi/${impi_version}/lib
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
 
 rpm -ivh epel-release-7-10.noarch.rpm
-yum install -y -q nfs-utils sshpass nmap htop npm
+#yum install -y -q nfs-utils sshpass nmap htop npm
+yum install -y -q nfs-utils sshpass nmap htop 
 yum groupinstall -y "X Window System"
-npm install -g azure-cli
+#npm install -g azure-cli
 
 echo "/mnt/nfsshare $localip.*(rw,sync,no_root_squash,no_all_squash)" | tee -a /etc/exports
 echo "/mnt/resource/scratch $localip.*(rw,sync,no_root_squash,no_all_squash)" | tee -a /etc/exports
